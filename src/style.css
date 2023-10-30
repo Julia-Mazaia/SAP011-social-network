@@ -23,6 +23,14 @@ h1{
     cursor: pointer;
     text-decoration: none;
 }
+.buttonlogin{
+    display: inline-block;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
 .buttoncadastro img{
     display: block;
     width: 100px;
@@ -62,4 +70,18 @@ h1{
     height: 20px;
     color: darkorchid;
 
+}
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.girar-imagem {
+    animation: girar 5s linear infinite; 
+    width: 100px; 
+    height: auto;
 }

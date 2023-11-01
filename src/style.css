@@ -23,6 +23,14 @@ h1{
     cursor: pointer;
     text-decoration: none;
 }
+.buttonlogin{
+    display: inline-block;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
 .buttoncadastro img{
     display: block;
     width: 100px;
@@ -31,18 +39,18 @@ h1{
 .caixacentralizada {
     width: 250px;
     height: 500px;
-    background: #ffff9e;
+    background: #FFFF9E;
     padding-top: 15px;
     padding-right: 20px;
     padding-bottom: 15px;
     padding-left: 20px;
     margin: 100px auto;
     border-radius: 5px;
-    box-shadow: 0px 0px 30px 2px #ffff9e;
+    box-shadow: 0px 0px 30px 2px #FFFF9E;
 }
 .title{
     display: flex;
-    justify-content: center;  
+    justify-content: center;
     align-items: flex-end;
     height: 50px;
     font-family: Arial, Helvetica, sans-serif;
@@ -50,7 +58,7 @@ h1{
 }
 .descript{
     display: flex;
-    justify-content: center;  
+    justify-content: center;
     align-items: baseline;
     height: 40px;
     color: darkorchid;
@@ -61,5 +69,51 @@ h1{
     align-items: baseline;
     height: 20px;
     color: darkorchid;
-
 }
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.girar-imagem {
+    animation: girar 5s linear infinite;
+    width: 100px;
+    height: auto;
+}
+22h04
+no main.js:
+22h04
+import home from "./pages/home/index.js";
+import biblioteca from "./pages/biblioteca/index.js";
+import mensagens from "./pages/mensagens/index.js";
+import cadastro from "./pages/cadastro/index.js";
+import login from "./pages/login/index.js";
+const main = document.querySelector("#root");
+const init = () => {
+  window.addEventListener('hashchange',() => {
+    main.innerHTML = " ";
+    switch(window.location.hash) {
+      case "#":
+      main.appendChild(home());
+      break;
+      case "#biblioteca":
+      main.appendChild(biblioteca());
+      break;
+      case "#mensagens":
+      main.appendChild(mensagens());
+      break;
+      case "#cadastro":
+      main.appendChild(cadastro())
+      break;
+      case "#login":
+      main.appendChild(login());
+     }
+  })
+}
+window.addEventListener("load", () => {
+main.appendChild(home());
+init()
+})

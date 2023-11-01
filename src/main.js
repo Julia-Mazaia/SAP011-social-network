@@ -1,11 +1,8 @@
 import home from "./pages/home/index.js";
-import biblioteca from "./pages/biblioteca/index.js"; 
+import biblioteca from "./pages/biblioteca/index.js";
 import mensagens from "./pages/mensagens/index.js";
-import cadastro from "./pages/cadastro/index.js";
-import login from "./pages/login/index.js";
 
 const main = document.querySelector("#root");
-
 const init = () => {
   window.addEventListener('hashchange',() => {
     main.innerHTML = " ";
@@ -19,16 +16,11 @@ const init = () => {
       case "#mensagens":
       main.appendChild(mensagens());
       break;
-      case "#cadastro":
-      main.appendChild(cadastro())
-      break;
-      case "#login":
-      main.appendChild(login());
+  
 
      }
   })
 }
-
 window.addEventListener("load", () => {
 main.appendChild(home());
 init()

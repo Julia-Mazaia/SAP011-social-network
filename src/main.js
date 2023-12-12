@@ -1,6 +1,8 @@
 import home from "./pages/home/index.js";
 import biblioteca from "./pages/biblioteca/index.js";
 import mensagens from "./pages/mensagens/index.js";
+import login from "./pages/login/index.js";
+
 
 const main = document.querySelector("#root");
 console.log (main);
@@ -26,6 +28,6 @@ const init = () => {
   })
 }
 window.addEventListener("load", () => {
-  main.appendChild(home());
+  main.appendChild(login());
   init()
 })

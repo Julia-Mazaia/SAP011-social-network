@@ -1,211 +1,291 @@
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 40%;
-    color: blueviolet;
-}
-
-ul{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: space-between;
-    
-}
-#Home{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 20%;
-}
-
-#biblioteca{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 20%;
-}
-#mensagens{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 20%;
-}
-.buttoncadastro{
-    display: inline-block;
-    border: none;
-    background: none;
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    margin: 0;
     padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-}
-.buttonlogin{
-    display: inline-block;
-    border: none;
-    background: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-}
-.buttoncadastro img{
-    display: block;
-    width: 100px;
-    height: auto;
-}
-.caixacentralizada {
-    width: 250px;
-    height: 500px;
-    background: #FFFF9E;
-    padding-top: 15px;
-    padding-right: 20px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    margin: 100px auto;
-    border-radius: 5px;
-    box-shadow: 0px 0px 30px 2px #FFFF9E;
-}
-.title{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: darkorchid;
 }
 
-.descript{
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    height: 40px;
-    color: darkorchid;
-}
-#email{
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    height: 20px;
-    color: darkorchid;
-}
-
-@keyframes girar {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-.girar-imagem {
-    animation: girar 5s linear infinite;
-    width: 100px;
-    height: auto;
-}
-
+/* Header */
 header {
-    width: 100%;
-    height: 50px;
-
-    background: #23a0ff;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    box-shadow: 1px 0 3px rgba(0,0,0,0.4);  
+    background-color: #23a0ff;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
 }
 
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Container */
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Main Section */
 #main {
     max-width: 900px;
     margin: 0 auto;
-    border: solid 5px green;
-} 
-
- div.newPost {
-   width: 100%;
-   height: 240px;
-
-   display: flex;
-   flex-direction: column;
-
-   background: #fff;
-   border: solid 5px red;
-   border-radius: 10px;
-   box-shadow: 1 0 3px rgba(0,0,0,0.2);
-   align-items: center;
-   justify-content: center;
+    /*border: solid 5px green;*/
 }
 
+/* New Post Form */
+div.newPost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
 
-div.imgUser {
+div.newPost .formPost {
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    font-size: 16px;
+    flex-grow: 2;
+    padding: 20px;
+    box-sizing: border-box; /* Borda e o preenchimento no tamanho total */
+}
+
+div.newPost textarea {
+    height: 90px;
+    width: 100%;
+    background: #f9f9f9;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #333;
+    box-sizing: border-box; /* Preenchimento no tamanho total */
+}
+
+div.newPost .iconsAndButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.newPost .icons button {
+    padding: 5px;
+    margin-right: 12px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+div.newPost .icons button:hover {
+    background: #fff;
+}
+
+div.newPost .submitButton button.btnSubmitForm {
+    background: #23a0ff;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Post */
+ul.posts {
+    list-style: none;
+    padding: 0;
+}
+
+ul.posts .post {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+ul.posts .infoUserPost {
+    display: flex;
+    align-items: center;
+}
+
+ul.posts .imgUserPost {
     width: 35px;
     height: 35px;
     border-radius: 50%;
     background: #333;
-}
-
-.formPost {
-  display: flex;
-  border: solid 5px yellow;
-  flex-direction: column;
-
-
-}
-
-div.formPost textarea {
-    height: 90px;
-    background: #FBFBFB;
-    margin: 15px 0;
-    padding: 25px;
-    border-radius: 10px;
-    resize: none;
-    outline: none;
-    border: 0;
-
-    font-weight: bold;
-    font-family: sans-serif;
-    color: #727272;
-    
-}
-
-div.iconsAndButtons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-div.icons button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    width: 100px;
-
-    outline: none;
     margin-right: 15px;
-    border: 0;
-    background: #fff;
+}
+
+div.actionBtnPost {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+div.actionBtnPost button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-
-    border-radius: 10px;
-    border: 0;
-    transition: background 0.2s;
- 
-}
-
-    {
-
-
+    transition: background 0.3s;
 }
 
 
-div class submitButton button.btnSubmitForm {
-   background: #23a0ff;
-   padding: 10px 50px;
-   color: #fff;
-   font-weight: bold;
-   outline: none;
-   cursor: pointer;
-
+/* DMs */
+.directMessages {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
- strong {
-    font-size: 16px;
+.directMessages .conversationList {
+    width: 30%;
+}
+
+.directMessages .conversation {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.directMessages .userAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #333;
+    margin-right: 10px;
+}
+
+.directMessages .userInfo h3 {
+    margin: 0;
+}
+
+.directMessages .messageArea {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.directMessages .chatHeader {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.directMessages .messageList {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px 0;
+}
+
+.directMessages .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.directMessages .fromMe {
+    text-align: right;
+    background-color: #3498db;
+    color: #fff;
+}
+
+.directMessages .fromOther {
+    background-color: #f2f2f2;
+}
+
+.directMessages .messageInput {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.directMessages .messageInput textarea {
+    flex-grow: 1;
+    padding: 10px;
+    resize: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.directMessages .messageInput button {
+    padding: 10px 20px;
+    background: #23a0ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     margin-left: 10px;
-    color: #23a0ff;
+    cursor: pointer;
+}
 
+/* Catálogo de livros sobre autismo */
+.bookCatalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bookCard {
+    width: 300px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.bookCard img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.bookCard .bookInfo {
+    padding: 10px;
+}
+
+.bookCard .bookInfo h2 {
+    margin: 2;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #23a0ff;
+    color: #fff;
+    margin-top: 25px;
 }

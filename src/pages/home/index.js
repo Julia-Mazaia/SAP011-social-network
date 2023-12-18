@@ -10,7 +10,7 @@ export default () => {
               <textarea name="textarea" placeholder="O que você está pensando?"></textarea>
               <div class="iconsAndButton">
                   <div class="icons">
-                      <button class="btnFileForm"><img src="url_da_imagem1" alt="adicionar uma imagem"></button>
+                      <button class="btnFileForm"><img src=  alt="adicionar uma imagem" ></button>
                       <button class="btnFileForm"><img src="url_da_imagem2" alt="adicionar um gif"></button>
                       <button class="btnFileForm"><img src="url_da_imagem3" alt="adicionar um video"></button>
                   </div>

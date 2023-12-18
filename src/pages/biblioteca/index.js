@@ -1,3 +1,5 @@
+import livro1 from "./autismobook1.jpg"
+import livro2 from "./autismobook2.jpg" 
 export default () => {
     const container = document.createElement ('div');
 
@@ -19,7 +21,7 @@ export default () => {
             <div class="bookCatalog">
                 <!-- Card do Livro 1 -->
                 <div class="bookCard">
-                    <img src="C:\Users\User\Desktop\Projetos\SAP011-social-network\src\pages\biblioteca\autismobook1.jpg" alt="Capa do Livro 1">
+                    <img src="${livro1}">
                     <div class="bookInfo">
                         <h2>Título do Livro 1</h2>
                         <p>Autor: Autor do Livro 1</p>
@@ -27,9 +29,9 @@ export default () => {
                         <p>Gênero: Ficção</p>
                     </div>
                 </div>
-                <!-- Card do Livro 1 -->
+                <!-- Card do Livro 2 -->
                 <div class="bookCard">
-                    <img src="autismobook2.jpg" alt="Capa do Livro 1">
+                    <img src="${livro2}" alt="Capa do Livro 1">
                     <div class="bookInfo">
                         <h2>Título do Livro 1</h2>
                         <p>Autor: Autor do Livro 1</p>
